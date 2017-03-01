@@ -20,23 +20,23 @@
                 url: '/people/all',
                 templateUrl: 'views/allPeople.view.html',
                 controller: 'allPeopleController',
-                controllerAs: 'allPC'
+                controllerAs: 'allPCtlr'
             })
-            /*.state('addPeople', {
-                url: 'people/add',
+            .state('addPeople', {
+                url: '/people/add',
                 templateUrl: 'views/addPeople.view.html',
-                controller: 'peopleController',
-                controllerAs: 'peopleCtlr'
+                controller: 'addPeopleController',
+                controllerAs: 'addPCtlr'
             })
 
-            .state('singlePeople', {
-                url: 'people/:id',
+        /*.state('singlePeople', {
+                url: '/people/:id',
                 templateUrl: 'views/allPeople.view.html',
                 controller: 'allPeopleController',
                 controllerAs: 'allPeopleCtlr'
             })
             .state('singleEditPeople', {
-                url: 'people/:id/edit',
+                url: '/people/:id/edit',
                 templateUrl: 'views/allPeople.view.html',
                 controller: 'allPeopleController',
                 controllerAs: 'allPeopleCtlr'

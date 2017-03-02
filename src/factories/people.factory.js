@@ -22,12 +22,12 @@
             }
         ];
 
-        this.savePeople = function (people) {
+        function savePeople(people) {
             people.id = peopleId++;
             peoples.push(people);
         }
 
-        this.updatePeople = function (people) {
+        function updatePeople(people) {
             for(var i in peoples){
                 if(peoples[i].id == people.id){
                     peoples[i] = people;
@@ -35,7 +35,7 @@
             }
         }
 
-        this.getPeople = function (id) {
+        function getPeople(id) {
             for(var i in peoples){
                 if(peoples[i].id == id){
                     return peoples[i];
@@ -43,16 +43,24 @@
             }
         }
 
-        this.getAllPeople = function () {
+        function getAllPeople() {
             return peoples;
         }
 
-        this.deletePeople = function (id) {
+        function deletePeople(id) {
             for (var i in peoples) {
                 if (peoples[i].id == id) {
                     peoples.splice(i, 1);
                 }
             }
+        }
+
+        return {
+            savePeople : savePeople(people),
+            updatePeople : updatePeople(people),
+            getPeople : getPeople(id),
+            getAllPeople : getAllPeople(),
+            deletePeople : deletePeople(id)
         }
     }
 })(window.angular);

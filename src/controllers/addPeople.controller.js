@@ -12,25 +12,35 @@
 
     app.controller('addPeopleController', constructor);
 
-    constructor.$inject = ['$scope', 'peopleService'];
-    function constructor($scope, peopleService) {
-        var people = {};
-        $scope.submit = function() {
-            if ($scope.name) {
-                people.constructor.name = this.name;
-                $scope.name = '';
-            }
-            if ($scope.address) {
-                people.constructor.address = this.address;
-                $scope.address = '';
-            }
-            if ($scope.mobileNumber) {
-                people.constructor.mobileNumber = this.mobileNumber;
-                $scope.mobileNumber = '';
-            }
+    constructor.$inject = ['$scope', 'peopleService', '$state'];
+    function constructor($scope, peopleService, $state) {
+        this.people = {
+            name: '',
+            address: '',
+            mobileNumber: '',
+        }
 
-            peopleService.savePeople(people);
+        this.addPeople = function() {
+            console.log(this.people);
+
+            var newPeople = clone(this.people);
+            if(newPeople.name != '' && newPeople.address != '' && newPeople.mobileNumber != '')
+                peopleService.savePeople(newPeople);
+
+            console.log(peopleService.getAllPeople());
+
+            this.people.name = '';
+            this.people.address = '';
+            this.people.mobileNumber = '';
         };
+
+        this.showAllPeople = function () {
+            $state.go('allPeople');
+        }
+
+        function clone(obj) {
+            return JSON.parse(JSON.stringify(obj));
+        }
     }
 
 })(window.angular);

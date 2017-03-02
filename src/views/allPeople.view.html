@@ -2,17 +2,20 @@
     <table class="text-center">
         <thead>
             <tr>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Address</th>
                 <th>Mobile Number</th>
             </tr>
         </thead>
         <tbody>
-            <tr data-ng-repeat="people in allPCtlr.allPeople">
+            <tr data-ng-repeat="people in allPCtlr.allPeople track by $index" ng-click="allPCtlr.personDetails(people)">
+                <td>{{people.id}}</td>
                 <td>{{people.name}}</td>
                 <td>{{people.address}}</td>
                 <td>{{people.mobileNumber}}</td>
             </tr>
+
         </tbody>
     </table>
 </div>

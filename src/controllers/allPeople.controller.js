@@ -9,9 +9,13 @@
 
     app.controller('allPeopleController', constructor);
 
-    constructor.$inject = ['peopleService'];
-    function constructor(peopleService) {
+    constructor.$inject = ['peopleService', '$state'];
+    function constructor(peopleService, $state) {
         this.allPeople = peopleService.getAllPeople();
+
+        this.personDetails = function(person){
+            $state.go('personDetails', {id: person.id});
+        }
     }
 
 })(window.angular);

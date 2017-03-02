@@ -1,0 +1,15 @@
+<div>
+    <form name="editForm">
+        <label>Name: </label>
+        <input type="text" ng-model="editPCtlr.personInfo.name" required> <br>
+        <label>Address: </label>
+        <input type="text" ng-model="editPCtlr.personInfo.address" required> <br>
+        <label>Mobile Number: </label>
+        <input type="text" ng-model="editPCtlr.personInfo.mobileNumber" required> <br>
+        <br>
+        <input type="button" id="save" value="save"  ng-click="editPCtlr.updatePeople()" />
+        <input type="button" id="cancel" value="cancel"  ng-click="editPCtlr.updatePeople()" />
+    </form>
+    <br>
+    <button ng-click="editPCtlr.showAllPeople()">All People</button>
+</div>

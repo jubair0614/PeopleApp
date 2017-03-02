@@ -29,18 +29,18 @@
                 controllerAs: 'addPCtlr'
             })
 
-        /*.state('singlePeople', {
+        .state('personDetails', {
                 url: '/people/:id',
-                templateUrl: 'views/allPeople.view.html',
-                controller: 'allPeopleController',
-                controllerAs: 'allPeopleCtlr'
+                templateUrl: 'views/onePerson.view.html',
+                controller: 'onePersonController',
+                controllerAs: 'onePCtlr'
             })
-            .state('singleEditPeople', {
+        .state('editPerson', {
                 url: '/people/:id/edit',
-                templateUrl: 'views/allPeople.view.html',
-                controller: 'allPeopleController',
-                controllerAs: 'allPeopleCtlr'
-            })*/;
+                templateUrl: 'views/editPerson.view.html',
+                controller: 'editPersonController',
+                controllerAs: 'editPCtlr'
+            });
         //$urlRouterProvider.when('', '/people');
         $locationProvider.hashPrefix('');
     }

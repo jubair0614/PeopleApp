@@ -16,6 +16,10 @@
         this.personDetails = function(person){
             $state.go('personDetails', {id: person.id});
         }
+
+        this.goAddPerson = function () {
+            $state.go('addPeople');
+        }
     }
 
 })(window.angular);

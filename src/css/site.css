@@ -6,3 +6,26 @@ body {
 .text-center {
      text-align: center;
  }
+
+.align-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.margin-top-10{
+    margin-top: 10%;
+}
+
+/*
+table th td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    height: 50px;
+}*/

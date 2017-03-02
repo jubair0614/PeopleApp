@@ -26,8 +26,10 @@
             var newPeople = clone(this.people);
             if(newPeople.name != '' && newPeople.address != '' && newPeople.mobileNumber != '')
                 peopleService.savePeople(newPeople);
-
-            console.log(peopleService.getAllPeople());
+            else {
+                alert('Please fill up those field');
+            }
+            //console.log(peopleService.getAllPeople());
 
             this.people.name = '';
             this.people.address = '';

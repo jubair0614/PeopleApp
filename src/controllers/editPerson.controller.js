@@ -16,6 +16,7 @@
         
         this.updatePeople = function () {
             peopleService.updatePeople(this.personInfo);
+            $state.go('allPeople');
         }
 
         this.showAllPeople = function () {

@@ -14,7 +14,7 @@
                 url: '/people',
                 templateUrl: 'views/people.view.html',
                 controller: 'peopleController',
-                controllerAs: 'pc'
+                controllerAs: 'pCtlr'
             })
             .state('allPeople', {
                 url: '/people/all',

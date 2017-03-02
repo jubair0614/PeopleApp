@@ -1,11 +1,27 @@
-<div>
-    <form name="addForm">
-        <label>Name: </label>
+<div class="align-center margin-top-10">
+    <form name="addForm" class="m-b-10px">
+        <table class="align-center">
+            <tbody>
+                <tr>
+                    <td><label>Name: </label></td>
+                    <td><input type="text" ng-model="addPCtlr.people.name" required></td>
+                </tr>
+                <tr>
+                    <td><label>Address: </label></td>
+                    <td><input type="text" ng-model="addPCtlr.people.address" required></td>
+                </tr>
+                <tr>
+                    <td><label>Mobile Number: </label></td>
+                    <td><input type="text" ng-model="addPCtlr.people.mobileNumber" required></td>
+                </tr>
+            </tbody>
+        </table>
+        <!--<label>Name: </label>
         <input type="text" ng-model="addPCtlr.people.name" required> <br>
         <label>Address: </label>
         <input type="text" ng-model="addPCtlr.people.address" required> <br>
         <label>Mobile Number: </label>
-        <input type="text" ng-model="addPCtlr.people.mobileNumber" required> <br>
+        <input type="text" ng-model="addPCtlr.people.mobileNumber" required> <br>-->
         <br>
         <input type="button" id="save" value="save"  ng-click="addPCtlr.addPeople()" />
 
